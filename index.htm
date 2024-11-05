@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hybrid Seeds Website Landing Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,300;1,700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        section {
+            position: relative;
+            height: 100vh; /* Full viewport height */
+            width: 100%;
+            padding: 40px; /* Reduced padding for better responsiveness */
+            display: flex;
+            justify-content: space-evenly; /* Centering content */
+            align-items: center;
+            background: #fff;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 1; /* Ensure the header is above the circle */
+        }
+
+        header .logo {
+            max-width: 80px;
+        }
+
+        header ul {
+            display: flex;
+            padding-left: 0; /* Remove padding for cleaner left alignment */
+            flex-wrap: nowrap; /* Prevent wrapping */
+            overflow: hidden; /* Hide overflow */
+        }
+
+        header ul li {
+            list-style: none;
+        }
+
+        header ul li a {
+            display: inline-block;
+            color: #333;
+            font-weight: 800;
+            margin-left: 40px;
+            text-decoration: none;
+            font-size: 1.5em; /* Font size for navigation items */
+            transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+        }
+
+        header ul li a:hover {
+            color: #0d8d57; /* Change color on hover */
+            transform: scale(1.05); /* Scale up on hover */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow effect on hover */
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow items to wrap in small screens */
+        }
+
+        .text-box {
+            max-width: 600px;
+            flex: 1;
+            padding: 20px; /* Padding for text box */
+        }
+
+        .text-box h2 {
+            color: #333;
+            font-size: 4em; /* Adjusted font size */
+            font-weight: 500;
+        }
+
+        .text-box h2 span {
+            color: #017143;
+            font-size: 1.5em; /* Span font size */
+            font-weight: 900;
+        }
+
+        .text-box p {
+            color: #333;
+            font-size: 1.2em; /* Paragraph font size */
+            margin-top: 20px; /* Spacing above paragraph */
+        }
+
+        .text-box a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #017143;
+            color: #fff;
+            border-radius: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .text-box a:hover {
+            background: #015d35; /* Darker green on hover */
+        }
+
+        .img-box {
+            flex: 1; /* Allow the image box to take available space */
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 40px;
+        }
+
+        .img-box img {
+    MARGIN-TOP: 115PX;
+    max-width: 80%;
+    height: 85vh;
+}
+.text-box h2 {
+    MARGIN-TOP: 100PX;
+    TOP-MARGIN: 51PX;
+    color: #333;
+    font-size: 4em;
+    font-weight: 500;
+}
+
+
+
+       
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1200px) {
+            section {
+                padding: 20px; /* Reduced padding for smaller screens */
+            }
+
+            header ul li a {
+                font-size: 1.3em; /* Smaller font size for links */
+                margin-left: 20px; /* Reduce margin */
+            }
+
+            .text-box h2 {
+                font-size: 3em; /* Smaller font size for heading */
+            }
+
+            .text-box p {
+                font-size: 1em; /* Smaller font size for paragraph */
+            }
+        }
+
+        @media (max-width: 768px) {
+            header ul {
+                flex-wrap: nowrap; /* Keep items in one line */
+                justify-content: center; /* Center align items */
+            }
+
+            header ul li a {
+                margin-left: 20px; /* Add space between links */
+            }
+
+            .text-box h2 {
+                font-size: 2.5em; /* Further reduce font size for heading */
+            }
+
+            .text-box p {
+                font-size: 0.9em; /* Further reduce font size for paragraph */
+            }
+
+            .img-box {
+                padding-right: 20px; /* Adjust padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header ul li a {
+                font-size: 1em; /* Smaller font size for links */
+            }
+
+            .text-box h2 {
+                font-size: 2em; /* Further reduce font size for heading */
+            }
+
+            .text-box p {
+                font-size: 0.8em; /* Further reduce font size for paragraph */
+            }
+
+            .text-box a {
+                padding: 8px 20px; /* Adjust button size */
+            }
+        }
+        /* Base styles */
+
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>
+            <a href="index.htm"><img src="download.jpg" class="logo" alt="Logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="abouthybridseed.htm" target="main">About Hybrid Seeds</a></li>
+                <li><a href="typeofhyd.htm">Types of Hybrid Seeds</a></li>
+                <li><a href="Benefit.html">Benefits of Hybrid Seeds</a></li>
+                <li><a href="whyhbs.htm">Why Hybrid Seeds</a></li>
+                <li><a href="rescach.htm">Research & Innovation</a></li>
+            </ul>
+        </header>
+        <div class="container">
+            <div class="text-box">
+                <h2>What are <br> <span>Hybrid Seeds?</span></h2>
+                <p>Hybrid seeds are created by cross-breeding two different plant varieties to enhance desirable traits such as yield, disease resistance, and climate adaptability. They play a crucial role in modern agriculture by providing higher productivity and better crop quality.</p>
+                <a href="abouthybridseed.htm" target="main">Learn More</a>
+            </div>
+            <div class="img-box">
+                <img src="pngwing.com.png" alt="Hybrid Seeds Image"> <!-- Add an image of hybrid seeds -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

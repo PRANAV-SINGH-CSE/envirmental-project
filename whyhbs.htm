@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Hybrid Seeds</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: aqua;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            transition: background-color 0.5s ease;
+        }
+
+        header {
+            background-color: #017143;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-grow: 0.1;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 1000;
+            border-radius: 17px;
+            transition: all 0.5s ease-in-out;
+
+
+        }
+
+        
+
+        header .logo {
+            max-width: 60px; /* Adjusted for better fit */
+            height: auto;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            
+            margin: 0;
+        }
+
+        header ul li {
+            margin-right: 20px;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 15px;
+            display: inline-block;
+            font-size: 1.2em; /* Increased font size for better visibility */
+            transition: all 0.2s ease-in-out;
+        }
+
+        header ul li a:hover {
+            border-radius: 5px;
+            transform: scale(1.2);
+        }
+
+        section {
+            padding: 80px 20px 40px; /* Adjusted padding for header spacing */
+            flex: 1;
+            margin: 0 auto;
+            background-color: #eadede;
+            border-radius: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.5s ease;
+            width: 100%; /* Ensures section uses full width */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em; /* Adjusted font size */
+            margin-bottom: 20px;
+            transition: color 0.7s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1:hover {
+            color: #f22303;
+        }
+
+        h2 {
+            font-size: 2em; /* Adjusted font size */
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+        }
+
+        h2:hover {
+            color: #017143;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 1px solid #017143;
+        }
+
+        footer {
+            text-align: start;
+            padding: 20px;
+            background-color: #017143;
+            color: #fff;
+            margin-top: auto;
+            transition: background-color 0.5s ease;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer:hover {
+            background-color: #0eb749;
+        }
+
+        img {
+            border-radius: 100%;
+        }
+
+        .glow-border {
+            position: relative;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            z-index: 1;
+            width: 100%; /* Full width */
+        }
+
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: none;
+            border: 6px solid transparent;
+            border-image: linear-gradient(45deg, #ff0095, #00ff99, #006aff, #ff4545, #ff0095) 1;
+            border-radius: 15px;
+            z-index: -1;
+            filter: blur(12px);
+            animation: glow 5s linear infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                border-image-source: linear-gradient(45deg, #ff0095, #00ff99, #006aff, #ff4545, #ff0095);
+            }
+            50% {
+                border-image-source: linear-gradient(45deg, #00ff99, #006aff, #ff4545, #ff0095, #ff0095);
+            }
+            100% {
+                border-image-source: linear-gradient(45deg, #ff0095, #00ff99, #006aff, #ff4545, #ff0095);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header ul li {
+                margin-right: 15px;
+            }
+
+            header ul li a {
+                font-size: 1em;
+                padding: 8px 10px;
+            }
+
+            h1 {
+                font-size: 2.5em; /* Responsive font size */
+            }
+
+            h2 {
+                font-size: 1.7em; /* Responsive font size */
+            }
+
+            p {
+                font-size: 1em; /* Responsive font size */
+            }
+
+            .glow-border {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header ul {
+                flex-direction: column;
+            }
+
+            header ul li {
+                margin-bottom: 10px;
+            }
+
+            section {
+                padding: 80px 10px 30px;
+            }
+
+            h1 {
+                font-size: 1.5em; /* Responsive font size */
+            }
+
+            h2 {
+                font-size: 1.2em; /* Responsive font size */
+            }
+
+            p {
+                font-size: 0.9em; /* Responsive font size */
+            }
+
+            .glow-border {
+                padding: 10px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.htm" target="main"><img src="download.jpg" class="logo" alt="Logo" ></a>
+
+        <ul>
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="abouthybridseed.htm">About Hybrid Seeds</a></li>
+            <li><a href="typeofhyd.htm">Types of Hybrid Seeds</a></li>
+            <li><a href="Benefit.html">Benefits of Hybrid Seeds</a></li>
+            <li><a href="#">Why Hybrid Seeds</a></li>
+            <li><a href="rescach.htm">Research & Innovation</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <br><br>
+        <div id="head" class="glow-border">
+            <h1>WHY HYBRID SEEDS</h1>
+        </div>
+        <br>
+
+        <div id="Higher Yield" class="glow-border">
+            <h2>Higher Yield</h2>
+            <p>-Hybrid seeds are developed to produce higher yields compared to traditional seeds. This can be crucial for projects aiming to produce biofuels or sustainable crops for EV energy sources.</p>
+        </div><br>
+
+        <div id="Disease Resistance" class="glow-border">
+            <h2>Disease Resistance</h2>
+            <p>Hybrid varieties are often more resistant to pests and diseases, reducing the need for chemical pesticides and contributing to more sustainable farming practices.</p>
+        </div><br>
+
+        <div id="Improved Quality" class="glow-border">
+            <h2>Improved Quality </h2>
+            <p> Many hybrids are bred for specific traits, such as better nutritional quality or improved taste, which can be beneficial for food crops.</p>
+        </div><br>
+        
+        <div id="Adaptability" class="glow-border">
+            <h2>Adaptability</h2>
+            <p>Hybrid seeds can be designed to thrive in various environmental conditions, making them suitable for different regions where EV projects might be implemented.</p>
+        
+        </div><br>
+
+        <div id="Faster Growth" class="glow-border">
+            <h2>Faster Growth</h2>
+            <p>Hybrids typically have shorter growth cycles, allowing for quicker harvests and potentially more frequent planting cycles. </p>
+        </div><br>
+
+        <div id="Cost-Effectivenes" class="glow-border">
+            <h2>Cost-Effectivenes</h2>
+            <p>While hybrid seeds can be more expensive initially, the increased yields and reduced inputs can lead to lower overall costs for farmers.</p>
+        </div><br>
+
+        <div id="Conclusion" class="glow-border">
+            <h2>Conclusion</h2>
+            <p>Hybrid seeds can enhance the efficiency and sustainability of agricultural practices that support EV projects, especially if biofuels or sustainable crops are involved.</p>
+        </div><br>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hybrid Seeds Info. All rights reserved by Pranav and Yash</p>
+    </footer>
+</body>
+</html>
