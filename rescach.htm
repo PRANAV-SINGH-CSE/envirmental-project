@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Hybrid Seeds</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: aqua;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            transition: background-color 0.5s ease;
+        }
+
+        header {
+            background-color: #017143;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-grow: 0.1;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 1000;
+            border-radius: 17px;
+            transition: all 0.5s ease-in-out;
+
+
+        }
+
+        
+
+        header .logo {
+            max-width: 60px; /* Adjusted for better fit */
+            height: auto;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            
+            margin: 0;
+        }
+
+        header ul li {
+            margin-right: 20px;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 15px;
+            display: inline-block;
+            font-size: 1.2em; /* Increased font size for better visibility */
+            transition: all 0.2s ease-in-out;
+        }
+
+        header ul li a:hover {
+            border-radius: 5px;
+            transform: scale(1.2);
+        }
+
+        section {
+            padding: 80px 20px 40px; /* Adjusted padding for header spacing */
+            flex: 1;
+            margin: 0 auto;
+            background-color: #eadede;
+            border-radius: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.5s ease;
+            width: 100%; /* Ensures section uses full width */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em; /* Adjusted font size */
+            margin-bottom: 20px;
+            transition: color 0.7s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1:hover {
+            color: #f22303;
+        }
+
+        h2 {
+            font-size: 2em; /* Adjusted font size */
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+        }
+
+        h2:hover {
+            color: #017143;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 1px solid #017143;
+        }
+
+        footer {
+            text-align: start;
+            padding: 20px;
+            background-color: #017143;
+            color: #fff;
+            margin-top: auto;
+            transition: background-color 0.5s ease;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer:hover {
+            background-color: #0eb749;
+        }
+
+        img {
+            border-radius: 100%;
+        }
+
+        .glow-border {
+            position: relative;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            z-index: 1;
+            width: 100%; /* Full width */
+        }
+
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: none;
+            border: 6px solid transparent;
+            border-image: linear-gradient(45deg, #ff0095, #00ff99, #006aff, #ff4545, #ff0095) 1;
+            border-radius: 15px;
+            z-index: -1;
+            filter: blur(12px);
+            animation: glow 5s linear infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                border-image-source: linear-gradient(45deg, #ff0095, #00ff99, #006aff, #ff4545, #ff0095);
+            }
+            50% {
+                border-image-source: linear-gradient(45deg, #00ff99, #006aff, #ff4545, #ff0095, #ff0095);
+            }
+            100% {
+                border-image-source: linear-gradient(45deg, #ff0095, #00ff99, #006aff, #ff4545, #ff0095);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header ul li {
+                margin-right: 15px;
+            }
+
+            header ul li a {
+                font-size: 1em;
+                padding: 8px 10px;
+            }
+
+            h1 {
+                font-size: 2.5em; /* Responsive font size */
+            }
+
+            h2 {
+                font-size: 1.7em; /* Responsive font size */
+            }
+
+            p {
+                font-size: 1em; /* Responsive font size */
+            }
+
+            .glow-border {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header ul {
+                flex-direction: column;
+            }
+
+            header ul li {
+                margin-bottom: 10px;
+            }
+
+            section {
+                padding: 80px 10px 30px;
+            }
+
+            h1 {
+                font-size: 1.5em; /* Responsive font size */
+            }
+
+            h2 {
+                font-size: 1.2em; /* Responsive font size */
+            }
+
+            p {
+                font-size: 0.9em; /* Responsive font size */
+            }
+
+            .glow-border {
+                padding: 10px;
+            }
+        }
+        img {
+            width: 40%; /* Ensures square size */
+            object-fit: cover; /* Ensures image content fits within */
+            border-radius: 0; /* No border rounding */
+            display: block;
+            margin: 0 auto; /* Centers the image */
+        }
+        .logo{
+            height: 30px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.htm" target="main"><img src="download.jpg" class="logo" alt="Logo" ></a>
+
+        <ul>
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="abouthybridseed.htm">About Hybrid Seeds</a></li>
+            <li><a href="typeofhyd.htm">Types of Hybrid Seeds</a></li>
+            <li><a href="Benefit.html">Benefits of Hybrid Seeds</a></li>
+            <li><a href="whyhbs.htm">Why Hybrid Seeds</a></li>
+            <li><a href="#">Research & Innovation</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <br><br>
+        <div id="head" class="glow-border">
+            <h1>RESEARCH AND INNOVATION</h1>
+        </div>
+        <br>
+
+        <div id="Genetic Research" class="glow-border">
+            <h2>Genetic Research </h2>
+            <p>Understanding the genetic makeup of plants to develop hybrids that have desirable traits, such as disease resistance, drought tolerance, and higher yields.</p>
+        </div><br>
+
+        <div id="Breeding Techniques" class="glow-border">
+            <h2>Breeding Techniques</h2>
+            <p>Utilizing advanced breeding techniques like marker-assisted selection and genomic selection to accelerate the development of new hybrid varieties.</p><br> <img src="production.png">
+        </div><br>
+
+        <div id="Field Trials" class="glow-border">
+            <h2>Field Trials</h2>
+            <p>Conducting extensive field trials to evaluate the performance of hybrid seeds under various environmental conditions and farming practices.</p>
+        </div><br>
+        
+        <div id="Market Research" class="glow-border">
+            <h2>Market Research</h2>
+            <p>Analyzing market trends and farmer needs to ensure the developed hybrids meet the demands of agricultural producers.</p><br>
+            <img src="market size.png">
+        </div><br>
+
+        <div id="Collaboration" class="glow-border">
+            <h2>Collaboration</h2>
+            <p>Partnering with agricultural research institutions, universities, and private companies to leverage expertise and resources.
+                 </p> <br> <img src="markert cap.png"  >
+        </div><br>
+
+
+      <div id="Regulatory Compliance" class="glow-border">
+        <h2>Regulatory Compliance</h2>
+        <p>Ensuring that all hybrid varieties meet the necessary regulatory standards for safety and efficacy. </p>
+      </div><br>
+
+      <div id="Education and Outreach" class="glow-border">
+        <div id="education" class="glow-border">
+            <h2>Education and Outreach</h2><br>
+            <p>Hybrid seeds hold immense potential to enhance agricultural productivity, but the effective use of this technology requires widespread educational and outreach programs. Training and providing resources to farmers is essential to make them aware of the numerous benefits and best practices associated with hybrid seeds. This involves organizing comprehensive workshops, practical field demonstrations, and creating user-friendly guides that detail their cultivation, optimal conditions, and advantages such as increased yields, disease resistance, and market competitiveness.</p>
+        
+            <p>To maximize the adoption rate, it is essential to implement targeted training sessions that cover fundamental and advanced practices like soil fertility management, precision planting techniques, irrigation scheduling, and the judicious use of fertilizers and pesticides. These training sessions should be conducted both in-person and through digital platforms to reach a wider audience. Interactive Q&A sessions and expert panels can address farmer concerns and foster an environment of trust and reliability.</p>
+        
+        </div>
+        <br> <img src="Education and Outreach.jpg"  >
+      </div><br>
+
+      <div id="Conclusion" class="glow-border">
+        <h2>Conclusion</h2>
+        <p>hybrid seeds projects enhance agricultural productivity and sustainability through genetic research, advanced breeding, and field trials. Collaboration and market analysis ensure effective development, while educating farmers promotes adoption. Focusing on sustainability is crucial for addressing climate challenges and ensuring food security.</p>
+      </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hybrid Seeds Info. All rights reserved by Pranav and Yash</p>
+    </footer>
+</body>
+</html>

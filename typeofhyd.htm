@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Hybrid Seeds</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: aqua;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            transition: background-color 0.5s ease;
+        }
+
+        header {
+            background-color: #017143;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 1000;
+            border-radius: 17px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        header .logo {
+            max-width: 60px;
+            height: auto;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header ul li {
+            margin-right: 20px;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 15px;
+            display: inline-block;
+            font-size: 1.2em;
+            transition: all 0.2s ease-in-out;
+        }
+
+        header ul li a:hover {
+            border-radius: 5px;
+            transform: scale(1.2);
+        }
+
+        section {
+            padding: 80px 20px 40px;
+            flex: 1;
+            margin: 0 auto;
+            background-color: #eadede;
+            border-radius: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.5s ease;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
+            transition: color 0.7s ease;
+            text-align: center;
+            padding-left: 30%;
+
+        }
+
+        h1:hover {
+            color: #017143;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+        }
+
+        h2:hover {
+            color: #017143;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: 1px solid #017143;
+        }
+
+        footer {
+            text-align: start;
+            padding: 20px;
+            background-color: #017143;
+            color: #fff;
+            margin-top: auto;
+            transition: background-color 0.5s ease;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer:hover {
+            background-color: #0eb749;
+        }
+
+        .glow-border {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            z-index: 1;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: none;
+            border: 6px solid transparent;
+            border-image: linear-gradient(45deg, #ff0095, #00ff99, #006aff, #ff4545, #ff0095) 1;
+            border-radius: 15px;
+            z-index: -1;
+            filter: blur(12px);
+            animation: glow 5s linear infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                border-image-source: linear-gradient(45deg, #ff0095, #00ff99, #006aff, #ff4545, #ff0095);
+            }
+            50% {
+                border-image-source: linear-gradient(45deg, #00ff99, #006aff, #ff4545, #ff0095, #ff0095);
+            }
+            100% {
+                border-image-source: linear-gradient(45deg, #ff0095, #00ff99, #006aff, #ff4545, #ff0095);
+            }
+        }
+
+        .glow-border img {
+            width: 150px;
+            height: auto;
+            flex-shrink: 0;
+            border-radius: 50%;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (max-width: 768px) {
+            header ul li {
+                margin-right: 15px;
+            }
+
+            header ul li a {
+                font-size: 1em;
+                padding: 8px 10px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.7em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .glow-border {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header ul {
+                flex-direction: column;
+            }
+
+            header ul li {
+                margin-bottom: 10px;
+            }
+
+            section {
+                padding: 80px 10px 30px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            .glow-border {
+                padding: 10px;
+            }
+        }
+        .logo{
+            height: inherit;
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.htm" target="main"><img src="download.jpg" class="logo" alt="Logo"></a>
+        <ul>
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="abouthybridseed.htm">About Hybrid Seeds</a></li>
+            <li><a href="#">Types of Hybrid Seeds</a></li>
+            <li><a href="Benefit.html">Benefits of Hybrid Seeds</a></li>
+            <li><a href="whyhbs.htm">Why Hybrid Seeds</a></li>
+            <li><a href="rescach.htm">Research & Innovation</a></li>
+        </ul>
+    </header>
+
+    <section><br><br>
+        <div id="head" class="glow-border">
+            <h1>Types of Hybrid Seeds</h1>
+        </div><br>
+
+        <div id="Definition" class="glow-border">
+            <img src="wheat.webp" alt="Wheat Image">
+            <div class="content">
+                <h2>Wheat</h2>
+                <p><b>The female wheat plants in a field are pollinated by male plants of a different line, with the goal of producing seeds that carry stronger yield potential and adaptability to adverse environments than either parent.<br>
+                The fertilized female plant produces new, unique offspring called a hybrid.</b></p>
+            </div>
+        </div><br>
+
+        <div id="characteristics" class="glow-border">
+            <img src="rice.webp" alt="Rice Image">
+            <div class="content">
+                <h2>Rice</h2>
+                <p><b>Hybrid rice is produced when the egg is fertilized by pollen from anthers of a rice plant from a different variety or line.<br>
+                In order to produce great quantities of hybrid seeds, two kinds of parental lines are needed, a seed parent which is usually male sterile and a pollen parent.</b></p>
+            </div>
+        </div><br>
+
+        <div id="Examples" class="glow-border">
+            <img src="Cauliflower-structures.webp" alt="Cauliflower Image">
+            <div class="content">
+                <h2>Cauliflower</h2>
+                <p><b>There are many different hybrid varieties of Cauliflower.</b></p>
+                <p><b>Orange cauliflower:</b> It is a hybridized variety first discovered in Canada in 1970, containing more beta carotene and making it a good source of vitamin A.</p>
+                <p><b>Green cauliflower:</b> It is also a hybrid variety between cauliflower and broccoli. The hybrid is also sometimes called Broccoflower.</p>
+            </div>
+        </div><br>
+
+        <div id="Conclusion" class="glow-border">
+            <img src="mustard.jpg" alt="Mustard Image">
+            <div class="content">
+                <h2>Mustard</h2>
+                <p><b>There are many different hybrid varieties of Mustard. These are adapted to the temperate climates of Europe and to mild winters in various regions, producing high-quality, firm curds weighing 1-1.5 kgs.</b></p>
+            </div>
+        </div><br>
+    </section>
+
+    <footer>
+        <p>© 2024 Hybrid Seeds Info. All rights reserved by Pranav and Garima</p>
+    </footer>
+</body>
+</html>
